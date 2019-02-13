@@ -108,7 +108,7 @@ module UTorrent
 
     def refresh!
       torrent = self.class.find(id)
-      @raw_array = torrent.raw_array
+      @raw_array = torrent.raw_array unless torrent.nil?
     end
 
     private
